@@ -1,0 +1,18 @@
+There can be two kind of questions depending on the nature of the responses: 
+1. Having simple responses of one field 
+2. Having responses of two fields (i.e. points forts and améliorations)
+
+***Files***
+"data-files/" directory contains the individual files for the training programmes.
+"merged-questions.json" contains all the files merged in one.
+
+***Format description***
+A JSON file for the individual training programmes contains a total of 18 lines corresponding to the 18 evaluation questions. A line contains a JSON object which represents an individual question with multiple responses. Following is the description of different JSON fields:
+
+"question" : Evaluation question (String)
+"réponses" : Responses to the question (JSON array or object depending on the qtype) 
+"qtype"	   : Question type ("1" or "2")
+                      -"1" indicates that "réponses" field is an array of simple responses 
+                      -"2" indicates that "réponses" field is a JSON object which contains two arrays (named "points-forts" and "améliorations") 
+"formation": Training programme code (String)
+
